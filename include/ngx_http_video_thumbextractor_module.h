@@ -85,7 +85,14 @@ typedef enum {
     NGX_HTTP_VIDEO_THUMBEXTRACTOR_TRANSFER_RC = 1,
     NGX_HTTP_VIDEO_THUMBEXTRACTOR_TRANSFER_IMAGE_LEN,
     NGX_HTTP_VIDEO_THUMBEXTRACTOR_TRANSFER_IMAGE_DATA,
-    NGX_HTTP_VIDEO_THUMBEXTRACTOR_TRANSFER_FINISHED
+    NGX_HTTP_VIDEO_THUMBEXTRACTOR_TRANSFER_FINISHED,
+    NGX_HTTP_VIDEO_THUMBEXTRACTOR_TRANSFER_SECOND,
+    NGX_HTTP_VIDEO_THUMBEXTRACTOR_TRANSFER_WIDTH,
+    NGX_HTTP_VIDEO_THUMBEXTRACTOR_TRANSFER_HEIGHT,
+    NGX_HTTP_VIDEO_THUMBEXTRACTOR_TRANSFER_FILENAME_LENGTH,
+    NGX_HTTP_VIDEO_THUMBEXTRACTOR_TRANSFER_FILENAME_DATA,
+    NGX_HTTP_VIDEO_THUMBEXTRACTOR_TRANSFER_FILE_OFFSET,
+    NGX_HTTP_VIDEO_THUMBEXTRACTOR_TRANSFER_CONFIG
 } ngx_http_video_thumbextractor_transfer_step;
 
 typedef struct {
@@ -96,7 +103,7 @@ typedef struct {
     size_t                                          size;
     ngx_int_t                                       rc;
     ngx_pool_t                                     *pool;
-    ngx_connection_t                               *conn;
+    ngx_http_video_thumbextractor_loc_conf_t       *vtlcf;
 } ngx_http_video_thumbextractor_transfer_t;
 
 typedef struct {
