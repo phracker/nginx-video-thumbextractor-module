@@ -23,6 +23,8 @@
  * Author:   Wandenberg Peixoto <wandenberg@gmail.com>
  *
  */
+#pragma GCC diagnostic ignored "-Wdeprecated-declarations"
+#pragma GCC diagnostic ignored "-Wimplicit-function-declaration"
 #include <ngx_http_video_thumbextractor_module.h>
 #include <ngx_http_video_thumbextractor_module_setup.c>
 #include <ngx_http_video_thumbextractor_module_utils.c>
